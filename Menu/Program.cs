@@ -26,7 +26,7 @@ namespace Menu
                        
                         break;
                     case 3:
-                        
+                        pr.BubbleSort();
                         break;
                     case 4:
                         
