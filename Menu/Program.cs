@@ -76,9 +76,38 @@ namespace Menu
         public void IsSymmetryArray()
         {
             
+            
            
         }
         public void BubbleSort() { 
+             int n, temp;
+            int[] a;
+            Console.WriteLine("Nhap so phan tu mang :");
+            n = int.Parse(Console.ReadLine());
+
+            a = new int[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("a[{0}]:", i);
+                a[i] = int.Parse(Console.ReadLine());
+            }
+
+            for (int i = 0; i < n - 1; i++)
+                for (int j = i + 1; j < n; j++)
+                    if (a[i] > a[j])
+                    {
+                        temp = a[i];
+                        a[i] = a[j];
+                        a[j] = temp;
+                    }
+
+            Console.WriteLine("Mang sau khi sap xep:");
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("{0} ,", a[i]);
+            }
+        }
 
         }
 
